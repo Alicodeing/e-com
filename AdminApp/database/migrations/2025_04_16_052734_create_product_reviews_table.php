@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('description', 1000);
             $table->integer('rating');
             $table->foreignId('product_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
-            $table->foreignId('customer_id')->references('id')->on('cuntomer_profiles')->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('customer_id')->references('id')->on('customer_profiles')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
-
-            $table->unique('product_id', 'customer_id');
+            
+            // Add unique constraint to prevent duplicate reviews
+            $table->unique(['product_id', 'customer_id']);;
         });
     }
 

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->longText('description');
             $table->string('color', 200)->nullable();
             $table->string('size', 200)->nullable();
-            $table->foreignId('prduct_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('product_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
         });
     }

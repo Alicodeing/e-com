@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('image', 200);
             $table->boolean('in_stock')->default(true);
             $table->integer('stock')->default(0);
-            $table->string('star')->default(0);
+            $table->float('star')->default(0);
             $table->enum('remark', ['popular', 'new', 'top', 'special', 'trending', 'regular'])->default('regular');
-            $table->foreignId('customer_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
             $table->foreignId('brand_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
         });
