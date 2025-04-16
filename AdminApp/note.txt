@@ -1,0 +1,2 @@
+//To create symbolic link 
+mklink /d "C:\Users\Dell3\Desktop\e-com\AdminApp\public\shared" "C:/shared/uploads"
