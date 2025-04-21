@@ -39,7 +39,7 @@ const submitForm = () => {
     form.put(`/settings/${props.setting.id}`, {
         onSuccess: () => {
             flash.value.success && toast.success(flash.value.success);
-            flash.value.error && toast.error(flash.value.success);
+            flash.value.error && toast.error(flash.value.error);
         }
     });
 };
