@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('store_password')->nullable();
             $table->string('currency')->nullable();
             $table->string('success_url')->nullable();
-            $table->string('file_url')->nullable();
+            $table->string('fail_url')->nullable();
             $table->string('cancel_url')->nullable();
             $table->string('ipn_url')->nullable();
             $table->string('init_url')->nullable();
