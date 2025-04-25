@@ -17,7 +17,7 @@ class Product extends Model
       'stock',  
       'star',  
       'remark',  
-      'customer_id',  
+      'category_id',  
       'brand_id'
     ];
 
